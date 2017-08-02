@@ -6,7 +6,7 @@
  */
 
 module.exports = class ImageStore {
-  constructor(s3Store, jastecStore) {
+  constructor({ s3Store, jastecStore }) {
     this.storageProvider = {
       S3: s3Store,
       JASTEC: jastecStore,

@@ -5,17 +5,8 @@
  * Created by samover on 24/07/2017.
  */
 
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
-chai.use(chaiAsPromised);
-const expect = require('chai').expect;
-const ImageStore = require('../src/imageStore');
+const { imageStore } = diContainer.cradle;
 
-const S3StoreMock = class S3Store {};
-const JastecStoreMock = class JastecStore {};
-const s3StoreMock = new S3StoreMock();
-const jastecStoreMock = new JastecStoreMock();
-const imageStore = new ImageStore(s3StoreMock, jastecStoreMock);
 imageStore.storageProvider = {
   testProvider: {},
 };

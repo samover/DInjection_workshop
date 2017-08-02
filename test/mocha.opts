@@ -1,0 +1,6 @@
+--require ./test/test_helper.js
+--recursive
+--reporter spec
+--ui tdd
+--colors
+--timeout 800000ms
