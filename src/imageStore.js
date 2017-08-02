@@ -5,14 +5,11 @@
  * Created by samover on 24/07/2017.
  */
 
-const S3Store = require('./s3Store');
-const JastecStore = require('./jastecStore');
-
 module.exports = class ImageStore {
-  constructor() {
+  constructor(s3Store, jastecStore) {
     this.storageProvider = {
-      S3: new S3Store(),
-      JASTEC: new JastecStore(),
+      S3: s3Store,
+      JASTEC: jastecStore,
     };
   }
 
