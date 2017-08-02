@@ -1,1 +1,1 @@
-module.exports = class {};
+module.exports = class S3Store {};
